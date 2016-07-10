@@ -5,18 +5,18 @@ const profile = {
 }
 
 const products = [
-  { 'id': 1, 'title': 'iPad 4 Mini', 'price': '500.01', 'inventory': 2 },
-  { 'id': 2, 'title': 'H&M T-Shirt White', 'price': '10.99', 'inventory': 10 },
-  { 'id': 3, 'title': 'Charli XCX - Sucker CD', 'price': '19.99', 'inventory': 3 },
-  { 'id': 4, 'title': 'Licensed Steel Gloves', 'price': '30.99', 'inventory': 5 },
-  { 'id': 5, 'title': 'Rustic Granite Car', 'price': '487.00', 'inventory': 1 },
-  { 'id': 6, 'title': 'Fantastic Cotton Pants', 'price': '59.59', 'inventory': 6 },
-  { 'id': 7, 'title': 'Tasty Wooden Pizza', 'price': '29.00', 'inventory': 2 },
-  { 'id': 8, 'title': 'Incredible Concrete Fish', 'price': '12.99', 'inventory': 4 },
-  { 'id': 9, 'title': 'Generic Granite Computer', 'price': '109.10', 'inventory': 10 },
-  { 'id': 10, 'title': 'Handcrafted Soft Salad', 'price': '13.99', 'inventory': 3 },
-  { 'id': 11, 'title': 'Incredible Steel Bacon', 'price': '30.99', 'inventory': 5 },
-  { 'id': 12, 'title': 'Tasty Plastic Bike', 'price': '75.00', 'inventory': 5 }
+  { 'id': 1, 'title': 'iPad 4 Mini', 'price': '500.01', 'inventory': 2, 'shipping': '15.00' },
+  { 'id': 2, 'title': 'H&M T-Shirt White', 'price': '10.99', 'inventory': 10, 'shipping': '5.00' },
+  { 'id': 3, 'title': 'Charli XCX - Sucker CD', 'price': '19.99', 'inventory': 3, 'shipping': '22.50' },
+  { 'id': 4, 'title': 'Licensed Steel Gloves', 'price': '30.99', 'inventory': 5, 'shipping': '9.00' },
+  { 'id': 5, 'title': 'Rustic Granite Car', 'price': '487.00', 'inventory': 1, 'shipping': '35.00' },
+  { 'id': 6, 'title': 'Fantastic Cotton Pants', 'price': '59.59', 'inventory': 6, 'shipping': '11.00' },
+  { 'id': 7, 'title': 'Tasty Wooden Pizza', 'price': '29.00', 'inventory': 2, 'shipping': '18.00' },
+  { 'id': 8, 'title': 'Incredible Concrete Fish', 'price': '12.99', 'inventory': 4, 'shipping': '6.00' },
+  { 'id': 9, 'title': 'Generic Granite Computer', 'price': '109.10', 'inventory': 10, 'shipping': '22.70' },
+  { 'id': 10, 'title': 'Handcrafted Soft Salad', 'price': '13.99', 'inventory': 3, 'shipping': '3.50' },
+  { 'id': 11, 'title': 'Incredible Steel Bacon', 'price': '30.99', 'inventory': 5, 'shipping': '7.90' },
+  { 'id': 12, 'title': 'Tasty Plastic Bike', 'price': '75.00', 'inventory': 5, 'shipping': '25.00' }
 ]
 
 // Simulate requests

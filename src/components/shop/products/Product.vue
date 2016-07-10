@@ -1,6 +1,5 @@
 <template>
   <li>
-    <thumb></thumb>
     <strong>{{product.title}}</strong>
     <span>{{product.price | currency}}</span>
     <button :disabled="!product.inventory"
@@ -11,7 +10,6 @@
 </template>
 
 <script>
-import Thumb from './../../shared/thumb'
 import { addToCart } from 'src/vuex/shop/actions'
 
 export default {
@@ -20,7 +18,6 @@ export default {
   },
   vuex: {
     actions: { addToCart }
-  },
-  components: { Thumb }
+  }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
   <li>
-    <thumb></thumb>
     <strong>{{item.title}}</strong>
     <span>{{item.price | currency}}</span>
     <span>- {{item.quantity}} {{item.quantity | pluralize 'item'}}</span>
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-import Thumb from './../../shared/thumb'
 import { removeFromCart } from 'src/vuex/shop/actions'
 
 export default {
@@ -19,7 +17,6 @@ export default {
   },
   vuex: {
     actions: { removeFromCart }
-  },
-  components: { Thumb }
+  }
 }
 </script>

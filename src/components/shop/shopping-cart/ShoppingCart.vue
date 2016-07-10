@@ -9,10 +9,13 @@
       track-by="id">
     </shopping-cart-item>
   </ul>
+
+  <shopping-cart-summary :items="items"></shopping-cart-summary>
 </template>
 
 <script>
 import ShoppingCartItem from './ShoppingCartItem'
+import ShoppingCartSummary from './ShoppingCartSummary'
 import { cartProducts } from 'src/vuex/shop/getters'
 
 export default {
@@ -21,6 +24,9 @@ export default {
       items: cartProducts
     }
   },
-  components: { ShoppingCartItem }
+  components: {
+    ShoppingCartItem,
+    ShoppingCartSummary
+  }
 }
 </script>
