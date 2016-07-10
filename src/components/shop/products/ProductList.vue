@@ -12,7 +12,7 @@
 
 <script>
 import { getProducts } from 'src/vuex/shop/actions'
-import Product from './product'
+import Product from './Product'
 
 export default {
   vuex: {

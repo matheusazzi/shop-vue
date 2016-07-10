@@ -3,20 +3,18 @@
     <strong>{{item.title}}</strong>
     <span>{{item.price | currency}}</span>
     <span>- {{item.quantity}} {{item.quantity | pluralize 'item'}}</span>
-    <button @click="removeFromCart(item, index)">x</button>
+    <remove-from-cart :product="item" :index="index"></remove-from-cart>
   </li>
 </template>
 
 <script>
-import { removeFromCart } from 'src/vuex/shop/actions'
+import RemoveFromCart from './../products/RemoveFromCart'
 
 export default {
   props: {
     item: Object,
     index: Number
   },
-  vuex: {
-    actions: { removeFromCart }
-  }
+  components: { RemoveFromCart }
 }
 </script>

@@ -3,22 +3,17 @@
     <strong>{{product.title}}</strong>
     <span>{{product.price | currency}}</span>
     <span>Stock: {{product.inventory}}</span>
-    <button :disabled="!product.inventory"
-      @click="addToCart(product)">
-      Add to cart
-    </button>
+    <add-to-cart :product="product"></add-to-cart>
   </li>
 </template>
 
 <script>
-import { addToCart } from 'src/vuex/shop/actions'
+import AddToCart from './AddToCart'
 
 export default {
   props: {
     product: Object
   },
-  vuex: {
-    actions: { addToCart }
-  }
+  components: { AddToCart }
 }
 </script>
