@@ -1,5 +1,5 @@
 <template>
-  <header v-if="profile">
+  <header v-if="profile.limit">
     Hello {{fullName}}, your credit limit is <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
   </header>
 </template>

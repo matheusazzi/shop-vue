@@ -2,6 +2,7 @@
   <li>
     <strong>{{product.title}}</strong>
     <span>{{product.price | currency}}</span>
+    <span>Stock: {{product.inventory}}</span>
     <button :disabled="!product.inventory"
       @click="addToCart(product)">
       Add to cart

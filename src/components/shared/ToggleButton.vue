@@ -1,3 +1,0 @@
-<template>
-  ToggleButton
-</template>

@@ -12,6 +12,12 @@ export const getProducts = ({ dispatch }) => {
   })
 }
 
+export const getPromotions = ({ dispatch }) => {
+  api.getPromotions(promotions => {
+    dispatch('RECEIVE_PROMOTIONS', promotions)
+  })
+}
+
 export const addToCart = ({ dispatch }, product) => {
   if (product.inventory > 0) {
     dispatch('ADD_TO_CART', product.id)

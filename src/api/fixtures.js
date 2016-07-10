@@ -19,6 +19,13 @@ const products = [
   { 'id': 12, 'title': 'Tasty Plastic Bike', 'price': '75.00', 'inventory': 5, 'shipping': '25.00' }
 ]
 
+const promotions = [
+  { 'id': 1, 'title': '30% OFF' },
+  { 'id': 2, 'title': '$100.00 Discount' },
+  { 'id': 3, 'title': 'Free Shipping' },
+  { 'id': 4, 'title': '+ $100.00 on limit' }
+]
+
 // Simulate requests
 
 export default {
@@ -28,5 +35,9 @@ export default {
 
   getProducts (cb) {
     setTimeout(() => cb(products), 200)
+  },
+
+  getPromotions (cb) {
+    setTimeout(() => cb(promotions), 200)
   }
 }

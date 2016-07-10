@@ -1,6 +1,6 @@
 <template>
   <h3>Products</h3>
-  
+
   <ul v-if="products">
     <product
       v-for="product in products"
