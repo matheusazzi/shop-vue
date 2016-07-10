@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Shop from './shop/components/Shop'
-import store from './store'
+import Shop from './components/shop/Shop'
+import store from './vuex/store'
 
 Vue.config.debug = true
 

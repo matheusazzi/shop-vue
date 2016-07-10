@@ -1,5 +1,4 @@
 <template>
-  <alert></alert>
   <page-header></page-header>
   <coupons></coupons>
   <product-list></product-list>
@@ -7,8 +6,7 @@
 </template>
 
 <script>
-import Alert from 'src/components/Alert'
-import PageHeader from 'src/components/PageHeader'
+import PageHeader from './../shared/PageHeader'
 import Coupons from './Coupons'
 import ProductList from './products/ProductList'
 import ShoppingCart from './shopping-cart/ShoppingCart'
@@ -16,7 +14,6 @@ import ShoppingCart from './shopping-cart/ShoppingCart'
 export default {
   components: {
     PageHeader,
-    Alert,
     Coupons,
     ProductList,
     ShoppingCart

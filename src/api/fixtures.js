@@ -19,6 +19,8 @@ const products = [
   { 'id': 12, 'title': 'Tasty Plastic Bike', 'price': '75.00', 'inventory': 5 }
 ]
 
+// Simulate requests
+
 export default {
   getProfile (cb) {
     setTimeout(() => cb(profile), 200)

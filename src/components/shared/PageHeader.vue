@@ -1,16 +1,17 @@
 <template>
   <header v-if="profile">
-    Hello {{fullName}}, your credit limit is <strong>{{profile.limit}}</strong>
+    Hello {{fullName}}, your credit limit is <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
   </header>
 </template>
 
 <script>
-import { getProfile } from 'src/shop/actions'
+import ShoppingCartLimit from './../shop/shopping-cart/ShoppingCartLimit'
+import { getProfile } from 'src/vuex/shop/actions'
 
 export default {
   vuex: {
     getters: {
-      profile: (state) => state.profile
+      profile: ({ profile }) => profile.data
     },
     actions: {
       getProfile
@@ -21,6 +22,7 @@ export default {
       return `${this.profile.firstName} ${this.profile.lastName}`
     }
   },
+  components: { ShoppingCartLimit },
   created () {
     this.getProfile()
   }
