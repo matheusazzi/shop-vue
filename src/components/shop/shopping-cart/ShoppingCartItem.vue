@@ -3,7 +3,7 @@
     <strong>{{item.title}}</strong>
     <span>{{item.price | currency}}</span>
     <span>- {{item.quantity}} {{item.quantity | pluralize 'item'}}</span>
-    <remove-from-cart :product="item" :index="index"></remove-from-cart>
+    <remove-from-cart :product="item"></remove-from-cart>
   </li>
 </template>
 
@@ -12,8 +12,7 @@ import RemoveFromCart from './../products/RemoveFromCart'
 
 export default {
   props: {
-    item: Object,
-    index: Number
+    item: Object
   },
   components: { RemoveFromCart }
 }

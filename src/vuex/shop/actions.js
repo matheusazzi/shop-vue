@@ -24,6 +24,6 @@ export const addToCart = ({ dispatch }, product) => {
   }
 }
 
-export const removeFromCart = ({ dispatch }, item, index) => {
-  dispatch('REMOVE_FROM_CART', item, index)
+export const removeFromCart = ({ dispatch }, product) => {
+  dispatch('REMOVE_FROM_CART', product)
 }

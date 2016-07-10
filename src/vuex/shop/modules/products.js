@@ -13,10 +13,10 @@ const mutations = {
       .inventory--
   },
 
-  REMOVE_FROM_CART (state, item, index) {
+  REMOVE_FROM_CART (state, removedProduct) {
     state.all
-      .find(product => product.id === item.id)
-      .inventory += item.quantity
+      .find(product => product.id === removedProduct.id)
+      .inventory += removedProduct.quantity
   }
 }
 
