@@ -2,11 +2,13 @@
 
 It's just a shopping cart experiment using VueJS.
 
+- [See it live!](http://matheusazzi.com/shopping-cart/)
+
 This project is built with [vue-cli](https://github.com/vuejs/vue-cli) and [vuex](https://github.com/vuejs/vuex).
 
 ### How cart works
 
-- Products can be added to the cart if they've a item on stock.
+- Products can be added to the cart if they've a item available on stock.
 - Products added to cart must be removable.
 - Checkout must be disabled if cart **total** is over user **limit**.
 - If a product already exists on cart, its counter should be updated.
