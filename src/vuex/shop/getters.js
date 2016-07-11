@@ -14,3 +14,9 @@ export const cartProducts = state => {
     }
   })
 }
+
+export const itemsQuantity = state => {
+  return cartProducts(state).reduce((quantity, item) => {
+    return quantity + item.quantity
+  }, 0)
+}

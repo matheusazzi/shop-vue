@@ -1,5 +1,6 @@
 const state = {
-  added: []
+  added: [],
+  freeShipping: false
 }
 
 const mutations = {
@@ -19,6 +20,12 @@ const mutations = {
   REMOVE_FROM_CART (state, item) {
     const index = state.added.findIndex(added => added.id === item.id)
     state.added.splice(index, 1)
+  },
+
+  TOGGLE_COUPON (state, coupon) {
+    if (coupon.id === 3) {
+      state.freeShipping = !state.freeShipping
+    }
   }
 }
 

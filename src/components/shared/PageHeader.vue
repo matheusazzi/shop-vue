@@ -1,6 +1,6 @@
 <template>
   <header v-if="profile.limit">
-    Hello {{fullName}}, your credit limit is <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
+    Hello <strong>{{fullName}}</strong>, your credit limit is <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
   </header>
 </template>
 
