@@ -11,22 +11,30 @@
   </ul>
 
   <shopping-cart-summary :items="items"></shopping-cart-summary>
+  <br>
+  <button :disabled="orderOnLimit" @click="buy">Checkout</button>
 </template>
 
 <script>
 import ShoppingCartItem from './ShoppingCartItem'
 import ShoppingCartSummary from './ShoppingCartSummary'
-import { cartProducts } from 'src/vuex/shop/getters'
+import { cartProducts, orderOnLimit } from 'src/vuex/shop/getters'
 
 export default {
   vuex: {
     getters: {
-      items: cartProducts
+      items: cartProducts,
+      orderOnLimit
     }
   },
   components: {
     ShoppingCartItem,
     ShoppingCartSummary
+  },
+  methods: {
+    buy () {
+      window.alert('You bought :)')
+    }
   }
 }
 </script>

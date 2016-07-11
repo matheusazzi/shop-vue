@@ -39,3 +39,5 @@ export const shipping = state => {
 }
 
 export const total = state => subtotal(state) + taxes(state) + shipping(state)
+
+export const orderOnLimit = state => state.profile.data.limit <= total(state)
