@@ -5,7 +5,7 @@
 <script>
 export default {
   props: {
-    limit: String
+    limit: Number
   }
 }
 </script>

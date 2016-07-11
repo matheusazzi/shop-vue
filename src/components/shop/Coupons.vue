@@ -3,13 +3,15 @@
 
   <ul>
     <li v-for="coupon in promotions" track-by="id">
-      <label><input type="checkbox"> {{coupon.title}}</label>
+      <label>
+        <input type="checkbox" @change="toggleCoupon(coupon)"> {{coupon.title}}
+      </label>
     </li>
   </ul>
 </template>
 
 <script>
-import { getPromotions } from 'src/vuex/shop/actions'
+import { getPromotions, toggleCoupon } from 'src/vuex/shop/actions'
 
 export default {
   vuex: {
@@ -17,7 +19,8 @@ export default {
       promotions: ({ promotions }) => promotions.all
     },
     actions: {
-      getPromotions
+      getPromotions,
+      toggleCoupon
     }
   },
   created () {

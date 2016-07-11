@@ -27,3 +27,7 @@ export const addToCart = ({ dispatch }, product) => {
 export const removeFromCart = ({ dispatch }, product) => {
   dispatch('REMOVE_FROM_CART', product)
 }
+
+export const toggleCoupon = ({ dispatch }, coupon) => {
+  dispatch('TOGGLE_COUPON', coupon)
+}
