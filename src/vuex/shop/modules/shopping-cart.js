@@ -1,5 +1,7 @@
 const state = {
   added: [],
+  productDiscount: false,
+  totalDiscount: false,
   freeShipping: false
 }
 
@@ -23,8 +25,16 @@ const mutations = {
   },
 
   TOGGLE_COUPON (state, coupon) {
-    if (coupon.id === 3) {
-      state.freeShipping = !state.freeShipping
+    switch (coupon.id) {
+      case 1:
+        state.productDiscount = !state.productDiscount
+        break
+      case 2:
+        state.totalDiscount = !state.totalDiscount
+        break
+      case 3:
+        state.freeShipping = !state.freeShipping
+        break
     }
   }
 }
