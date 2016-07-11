@@ -1,5 +1,3 @@
-const LIMIT_COUPON_ID = 4
-
 const state = {
   data: {}
 }
@@ -10,7 +8,9 @@ const mutations = {
   },
 
   TOGGLE_COUPON (state, coupon) {
-    if (coupon.id !== LIMIT_COUPON_ID) return
+    const couponLimitId = 4
+
+    if (coupon.id !== couponLimitId) return
 
     if (!coupon.active) {
       state.data.limit += 100

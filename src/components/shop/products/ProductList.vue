@@ -1,7 +1,7 @@
 <template>
   <h3>Products</h3>
 
-  <ul v-if="products">
+  <ul v-if="products.length">
     <product
       v-for="product in products"
       :product="product"

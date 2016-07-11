@@ -1,16 +1,15 @@
 <template>
   <h3>Promotions</h3>
 
-  <ul>
+  <ul v-if="promotions.length">
     <li v-for="coupon in promotions" track-by="id">
-      <label>
-        <input type="checkbox" @change="toggleCoupon(coupon)"> {{coupon.title}}
-      </label>
+      <toggle :data="coupon"></toggle>
     </li>
   </ul>
 </template>
 
 <script>
+import Toggle from './../shared/Toggle'
 import { getPromotions, toggleCoupon } from 'src/vuex/shop/actions'
 
 export default {
@@ -21,6 +20,12 @@ export default {
     actions: {
       getPromotions,
       toggleCoupon
+    }
+  },
+  components: { Toggle },
+  events: {
+    toggled (coupon) {
+      this.toggleCoupon(coupon)
     }
   },
   created () {

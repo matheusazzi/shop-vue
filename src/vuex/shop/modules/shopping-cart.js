@@ -25,16 +25,14 @@ const mutations = {
   },
 
   TOGGLE_COUPON (state, coupon) {
-    switch (coupon.id) {
-      case 1:
-        state.productDiscount = !state.productDiscount
-        break
-      case 2:
-        state.totalDiscount = !state.totalDiscount
-        break
-      case 3:
-        state.freeShipping = !state.freeShipping
-        break
+    const coupons = {
+      '1': 'productDiscount',
+      '2': 'totalDiscount',
+      '3': 'freeShipping'
+    }
+
+    if (coupons[coupon.id]) {
+      state[coupons[coupon.id]] = !state[coupons[coupon.id]]
     }
   }
 }

@@ -32,9 +32,6 @@ import {
 } from 'src/vuex/shop/getters'
 
 export default {
-  props: {
-    items: Array
-  },
   vuex: {
     getters: {
       productDiscount: ({ shoppingCart }) => shoppingCart.productDiscount,
