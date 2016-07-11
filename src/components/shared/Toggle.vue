@@ -1,18 +1,14 @@
 <template>
   <label>
-    <input type="checkbox" @change="action"> {{data.title}}
+    <input type="checkbox" @change="action(data)"> {{data.title}}
   </label>
 </template>
 
 <script>
 export default {
   props: {
-    data: Object
-  },
-  methods: {
-    action () {
-      this.$dispatch('toggled', this.data)
-    }
+    data: Object,
+    action: Function
   }
 }
 </script>

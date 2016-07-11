@@ -3,7 +3,7 @@
 
   <ul v-if="promotions.length">
     <li v-for="coupon in promotions" track-by="id">
-      <toggle :data="coupon"></toggle>
+      <toggle :data="coupon" :action="toggleCoupon"></toggle>
     </li>
   </ul>
 </template>
@@ -23,11 +23,6 @@ export default {
     }
   },
   components: { Toggle },
-  events: {
-    toggled (coupon) {
-      this.toggleCoupon(coupon)
-    }
-  },
   created () {
     this.getPromotions()
   }

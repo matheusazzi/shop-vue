@@ -8,9 +8,12 @@
 </template>
 
 <script>
+import AddToCart from './AddToCart'
+
 export default {
   props: {
     product: Object
-  }
+  },
+  components: { AddToCart }
 }
 </script>
