@@ -35,6 +35,7 @@ export default {
   methods: {
     buy () {
       window.alert('You bought :)')
+      window.location.reload()
     }
   }
 }
