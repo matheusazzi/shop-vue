@@ -13,6 +13,7 @@
   <shopping-cart-summary :items="items"></shopping-cart-summary>
   <br>
   <button :disabled="orderOnLimit" @click="buy">Checkout</button>
+  <span v-if="orderOnLimit">Order is over limit.</span>
 </template>
 
 <script>
