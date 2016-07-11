@@ -38,6 +38,9 @@ export const shipping = state => {
   }
 }
 
-export const total = state => subtotal(state) + taxes(state) + shipping(state)
+export const total = state => {
+  const discout = state.shoppingCart.totalDiscount ? -100 : 0
+  return subtotal(state) + taxes(state) + shipping(state) + discout
+}
 
 export const orderOnLimit = state => state.profile.data.limit <= total(state)

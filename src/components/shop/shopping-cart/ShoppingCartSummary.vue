@@ -16,7 +16,7 @@
     <strong>Total:</strong>
     <strong v-if="!totalDiscount"> {{total | currency}}</strong>
     <span v-if="totalDiscount">
-      <strike> {{total | currency}}</strike>
+      <strike> {{total + 100 | currency}}</strike>
       <strong> {{totalWithDiscount | currency}}</strong>
     </span>
   </div>
@@ -49,8 +49,7 @@ export default {
   },
   computed: {
     totalWithDiscount () {
-      const withDiscout = this.total - 100
-      return withDiscout > 0 ? withDiscout : 0
+      return this.total > 0 ? this.total : 0
     }
   }
 }
