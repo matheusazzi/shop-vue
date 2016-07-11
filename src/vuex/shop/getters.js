@@ -6,10 +6,7 @@ export const cartProducts = state => {
         .find(product => product.id === id)
 
     return {
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      shipping: product.shipping,
+      ...product,
       quantity
     }
   })
@@ -20,3 +17,23 @@ export const itemsQuantity = state => {
     return quantity + item.quantity
   }, 0)
 }
+
+export const subtotal = state => {
+  return cartProducts(state).reduce((subtotal, item) => {
+    return subtotal + item.price * item.quantity
+  }, 0)
+}
+
+export const taxes = state => subtotal(state) * 0.005
+
+export const shipping = state => {
+  const shippings = cartProducts(state).map(item => item.shipping)
+
+  if (state.shoppingCart.freeShipping || !shippings.length) {
+    return 0
+  } else {
+    return Math.max(...shippings)
+  }
+}
+
+export const total = state => subtotal(state) + taxes(state) + shipping(state)

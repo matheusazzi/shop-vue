@@ -11,7 +11,13 @@
 </template>
 
 <script>
-import { itemsQuantity } from 'src/vuex/shop/getters'
+import {
+  itemsQuantity,
+  subtotal,
+  taxes,
+  shipping,
+  total
+} from 'src/vuex/shop/getters'
 
 export default {
   props: {
@@ -20,29 +26,11 @@ export default {
   vuex: {
     getters: {
       freeShipping: ({ shoppingCart }) => shoppingCart.freeShipping,
-      itemsQuantity
-    }
-  },
-  computed: {
-    subtotal () {
-      return this.items.reduce((subtotal, item) => {
-        return subtotal + item.price * item.quantity
-      }, 0)
-    },
-    taxes () {
-      return this.subtotal * 0.005
-    },
-    shipping () {
-      const shippings = this.items.map(item => item.shipping)
-
-      if (this.freeShipping || !shippings.length) {
-        return 0
-      } else {
-        return Math.max(...shippings)
-      }
-    },
-    total () {
-      return this.subtotal + this.taxes + this.shipping
+      itemsQuantity,
+      subtotal,
+      taxes,
+      shipping,
+      total
     }
   }
 }
