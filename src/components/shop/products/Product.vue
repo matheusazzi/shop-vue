@@ -1,7 +1,7 @@
 <template>
   <li>
     <strong>{{product.title}}</strong>
-    <span>{{product.price | currency}}</span>
+    <span>{{product.price | formatMoney}}</span>
     <span>Stock: {{product.inventory}}</span>
     <add-to-cart :product="product"></add-to-cart>
   </li>

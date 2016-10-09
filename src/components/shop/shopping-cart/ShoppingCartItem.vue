@@ -1,8 +1,8 @@
 <template>
   <li>
     <strong>{{item.title}}</strong>
-    <span>{{item.price | currency}}</span>
-    <span>- {{item.quantity}} {{item.quantity | pluralize 'item'}}</span>
+    <span>{{item.price | formatMoney}}</span>
+    <span>- {{item.quantity}} {{'item' | pluralize(item.quantity) }}</span>
     <remove-from-cart :product="item"></remove-from-cart>
   </li>
 </template>

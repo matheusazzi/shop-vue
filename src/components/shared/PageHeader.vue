@@ -6,22 +6,20 @@
 
 <script>
 import ShoppingCartLimit from './../shop/shopping-cart/ShoppingCartLimit'
-import { getProfile } from 'src/vuex/shop/actions'
+import { mapActions, mapState } from 'vuex'
 
 export default {
-  vuex: {
-    getters: {
-      profile: ({ profile }) => profile.data
-    },
-    actions: {
-      getProfile
-    }
-  },
   computed: {
+    ...mapState({
+      profile: state => state.profile.data
+    }),
     fullName () {
       return `${this.profile.firstName} ${this.profile.lastName}`
     }
   },
+  methods: mapActions([
+    'getProfile'
+  ]),
   components: { ShoppingCartLimit },
   created () {
     this.getProfile()

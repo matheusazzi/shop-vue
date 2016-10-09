@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import { removeFromCart } from 'src/vuex/shop/actions'
+import { mapActions } from 'vuex'
 
 export default {
   props: {
     product: Object
   },
-  vuex: {
-    actions: { removeFromCart }
-  }
+  methods: mapActions([
+    'removeFromCart'
+  ])
 }
 </script>

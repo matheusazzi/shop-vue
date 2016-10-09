@@ -1,11 +1,14 @@
 import Vue from 'vue'
+import accounting from 'accounting'
+import pluralize from 'pluralize'
 import Shop from './components/shop/Shop'
-import store from './vuex/store'
+import store from './store'
 
-Vue.config.debug = true
+Vue.filter('formatMoney', accounting.formatMoney)
+Vue.filter('pluralize', pluralize)
 
 new Vue({
   el: 'body',
   store,
-  components: { Shop }
+  render: h => h(Shop)
 })

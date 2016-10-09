@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import { addToCart } from 'src/vuex/shop/actions'
+import { mapActions } from 'vuex'
 
 export default {
   props: {
     product: Object
   },
-  vuex: {
-    actions: { addToCart }
-  }
+  methods: mapActions([
+    'addToCart'
+  ])
 }
 </script>

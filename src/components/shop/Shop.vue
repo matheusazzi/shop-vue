@@ -1,8 +1,10 @@
 <template>
-  <page-header></page-header>
-  <coupons></coupons>
-  <product-list></product-list>
-  <shopping-cart></shopping-cart>
+  <div>
+    <page-header></page-header>
+    <coupons></coupons>
+    <product-list></product-list>
+    <shopping-cart></shopping-cart>
+  </div>
 </template>
 
 <script>

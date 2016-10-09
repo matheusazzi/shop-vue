@@ -1,5 +1,5 @@
 <template>
-  <strong>{{limit | currency}}</strong>
+  <strong>{{limit | formatMoney}}</strong>
 </template>
 
 <script>
