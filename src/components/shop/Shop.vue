@@ -14,6 +14,7 @@ import ProductList from './products/ProductList'
 import ShoppingCart from './shopping-cart/ShoppingCart'
 
 export default {
+  name: 'shop',
   components: {
     PageHeader,
     Coupons,
