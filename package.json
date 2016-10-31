@@ -1,7 +1,7 @@
 {
   "name": "shop-vue",
   "version": "1.0.0",
-  "description": "Just a shopping cart experiment using VueJS",
+  "description": "Just a shopping cart experiment using Vue.js",
   "author": "Matheus Azzi <matheuslazzi@gmail.com>",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "accounting": "^0.4.1",
+    "chunk": "0.0.2",
     "pluralize": "^3.0.0",
     "vue": "^2.0.3",
     "vuex": "^2.0.0"

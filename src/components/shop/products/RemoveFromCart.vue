@@ -1,5 +1,8 @@
 <template>
-  <button @click="removeFromCart(product)">x</button>
+  <button type="button" class="close"
+    @click="removeFromCart(product)">
+    &times;
+  </button>
 </template>
 
 <script>

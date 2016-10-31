@@ -1,6 +1,6 @@
 # Shop-vue
 
-It's just a shopping cart experiment using VueJS.
+It's just a shopping cart experiment using Vue.js.
 
 - [See it live!](http://matheusazzi.com/shopping-cart/)
 

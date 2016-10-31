@@ -2,20 +2,22 @@
   <div>
     <h3>Cart</h3>
 
-    <ul v-if="items.length">
-      <shopping-cart-item
-        v-for="item in items"
-        :item="item"
-        :key="item.id">
-      </shopping-cart-item>
-    </ul>
+    <shopping-cart-item
+      v-for="item in items"
+      :item="item"
+      :key="item.id">
+    </shopping-cart-item>
 
     <shopping-cart-summary></shopping-cart-summary>
 
-    <p>
-      <button :disabled="orderOnLimit" @click="buy">Checkout</button>
-      <span v-if="orderOnLimit">Order is over limit.</span>
-    </p>
+    <div class="mt-1 text-xs-center">
+      <button class="btn btn-success"
+        :disabled="orderOnLimit"
+        @click="buy">
+        Checkout
+      </button>
+      <p v-if="orderOnLimit">Order is over limit.</p>
+    </div>
   </div>
 </template>
 

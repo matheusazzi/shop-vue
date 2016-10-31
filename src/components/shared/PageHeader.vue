@@ -1,7 +1,14 @@
 <template>
-  <header v-if="profile.limit">
-    Hello <strong>{{fullName}}</strong>, your credit limit is <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
-  </header>
+  <nav class="navbar navbar-light bg-faded" v-if="profile.limit">
+    <div class="container">
+      <a class="navbar-brand" href="/">Shop</a>
+
+      <span class="navbar-text float-xs-right">
+        Hello <strong>{{fullName}}</strong>, your credit limit is
+         <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
+      </span>
+    </div>
+  </nav>
 </template>
 
 <script>

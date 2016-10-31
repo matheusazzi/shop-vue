@@ -1,27 +1,27 @@
 <template>
-  <div>
-    <div>
+  <ul class="list-group">
+    <li class="list-group-item">
       Subtotal ({{itemsQuantity}} {{'item' | pluralize(itemsQuantity) }}): {{subtotal | formatMoney}}
       <em v-if="productDiscount"><b> (30% OFF applied)</b></em>
-    </div>
+    </li>
 
-    <div>
+    <li class="list-group-item">
       Shipping:
       <span v-if="!freeShipping"> {{shipping | formatMoney}}</span>
       <em v-if="freeShipping"> Free Shipping</em>
-    </div>
+    </li>
 
-    <div>Taxes: {{taxes | formatMoney}}</div>
+    <li class="list-group-item">Taxes: {{taxes | formatMoney}}</li>
 
-    <div>
+    <li class="list-group-item">
       <strong>Total:</strong>
       <strong v-if="!totalDiscount"> {{total | formatMoney}}</strong>
       <span v-if="totalDiscount">
         <strike> {{total + 100 | formatMoney}}</strike>
         <strong> {{totalWithDiscount | formatMoney}}</strong>
       </span>
-    </div>
-  </div>
+    </li>
+  </ul>
 </template>
 
 <script>

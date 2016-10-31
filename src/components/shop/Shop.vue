@@ -1,9 +1,20 @@
 <template>
   <div>
     <page-header></page-header>
-    <coupons></coupons>
-    <product-list></product-list>
-    <shopping-cart></shopping-cart>
+
+    <div class="container">
+      <coupons></coupons>
+
+      <div class="row mt-2">
+        <div class="col-sm-9">
+          <product-list></product-list>
+        </div>
+        <div class="col-sm-3">
+          <shopping-cart></shopping-cart>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 

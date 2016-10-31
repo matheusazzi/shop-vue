@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div class="mt-2">
     <h3>Promotions</h3>
 
-    <ul v-if="promotions.length">
-      <li v-for="coupon in promotions" :key="coupon.id">
-        <toggle :data="coupon" :action="toggleCoupon"></toggle>
-      </li>
-    </ul>
+    <toggle
+      :data="coupon"
+      :action="toggleCoupon"
+      v-for="coupon in promotions"
+      :key="coupon.id">
+    </toggle>
   </div>
 </template>
 
