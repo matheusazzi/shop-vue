@@ -15,8 +15,8 @@
     "accounting": "^0.4.1",
     "chunk": "0.0.2",
     "pluralize": "^3.0.0",
-    "vue": "^2.0.3",
-    "vuex": "^2.0.0"
+    "vue": "^2.4.1",
+    "vuex": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
