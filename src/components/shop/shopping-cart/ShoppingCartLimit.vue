@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'ShoppingCartLimit',
   props: {
     limit: Number
   }

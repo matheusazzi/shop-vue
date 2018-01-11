@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'Toggle',
   props: {
     data: Object,
     action: Function

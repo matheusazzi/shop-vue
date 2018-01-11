@@ -5,7 +5,7 @@
 
       <span class="navbar-text float-xs-right">
         Hello <strong>{{fullName}}</strong>, your credit limit is
-         <shopping-cart-limit :limit="profile.limit"></shopping-cart-limit>
+         <ShoppingCartLimit :limit="profile.limit" />
       </span>
     </div>
   </nav>
@@ -16,6 +16,7 @@ import ShoppingCartLimit from './../shop/shopping-cart/ShoppingCartLimit'
 import { mapActions, mapState } from 'vuex'
 
 export default {
+  name: 'PageHeader',
   computed: {
     ...mapState({
       profile: state => state.profile.data

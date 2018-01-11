@@ -28,6 +28,7 @@
 import { mapGetters, mapState } from 'vuex'
 
 export default {
+  name: 'ShoppingCartSummary',
   computed: {
     ...mapGetters([
       'itemsQuantity',

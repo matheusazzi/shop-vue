@@ -1,16 +1,16 @@
 <template>
   <div>
-    <page-header></page-header>
+    <PageHeader />
 
     <div class="container">
-      <coupons></coupons>
+      <Coupons />
 
       <div class="row mt-2">
         <div class="col-sm-9">
-          <product-list></product-list>
+          <ProductList />
         </div>
         <div class="col-sm-3">
-          <shopping-cart></shopping-cart>
+          <ShoppingCart />
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@ import ProductList from './products/ProductList'
 import ShoppingCart from './shopping-cart/ShoppingCart'
 
 export default {
-  name: 'shop',
+  name: 'Shop',
   components: {
     PageHeader,
     Coupons,

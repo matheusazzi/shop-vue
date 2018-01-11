@@ -9,6 +9,7 @@
 import { mapActions } from 'vuex'
 
 export default {
+  name: 'RemoveFromCart',
   props: {
     product: Object
   },

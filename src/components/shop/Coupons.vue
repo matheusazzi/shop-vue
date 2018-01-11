@@ -2,12 +2,11 @@
   <div class="mt-2">
     <h3>Promotions</h3>
 
-    <toggle
+    <Toggle
       :data="coupon"
       :action="toggleCoupon"
       v-for="coupon in promotions"
-      :key="coupon.id">
-    </toggle>
+      :key="coupon.id" />
   </div>
 </template>
 
@@ -16,6 +15,7 @@ import Toggle from './../shared/Toggle'
 import { mapActions, mapState } from 'vuex'
 
 export default {
+  name: 'Coupons',
   computed: mapState({
     promotions: state => state.promotions.all
   }),
