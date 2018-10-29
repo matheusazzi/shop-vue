@@ -9,7 +9,7 @@ import shoppingCart from './shop/modules/shopping-cart'
 
 Vue.use(Vuex)
 
-const debug = process.env.NODE_ENV !== 'production'
+const strict = process.env.NODE_ENV !== 'production'
 
 export default new Vuex.Store({
   actions,
@@ -20,5 +20,5 @@ export default new Vuex.Store({
     promotions,
     shoppingCart
   },
-  strict: debug
+  strict
 })

@@ -2,8 +2,8 @@
   <div>
     <h3>Products</h3>
 
-    <div class="row" v-for="row in productRows">
-      <div class="col-sm-4" v-for="product in row">
+    <div class="row" v-for="(row, index) in productRows" :key="index">
+      <div class="col-sm-4" v-for="product in row" :key="product.id">
         <Product :product="product" track-by="id" />
       </div>
     </div>
