@@ -1,8 +1,7 @@
 <template>
-  <label class="custom-control custom-checkbox">
+  <label class="custom-control custom-control-inline custom-checkbox">
     <input type="checkbox" class="custom-control-input" @change="action(data)">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">{{data.title}}</span>
+    <span class="custom-control-label">{{data.title}}</span>
   </label>
 </template>
 

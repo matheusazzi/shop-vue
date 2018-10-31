@@ -1,7 +1,11 @@
 <template>
-  <button type="button" class="close"
-    @click="removeFromCart(product)">
-    &times;
+  <button
+    type="button"
+    class="close"
+    aria-label="Remove"
+    @click="removeFromCart(product)"
+  >
+    <span aria-hidden="true">&times;</span>
   </button>
 </template>
 

@@ -5,10 +5,11 @@
     <div class="container">
       <Coupons />
 
-      <div class="row mt-2">
+      <div class="row mt-4">
         <div class="col-sm-9">
           <ProductList />
         </div>
+
         <div class="col-sm-3">
           <ShoppingCart />
         </div>

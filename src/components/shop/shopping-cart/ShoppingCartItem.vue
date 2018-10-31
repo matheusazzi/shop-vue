@@ -1,12 +1,14 @@
 <template>
-  <div class="media mb-1">
-    <div class="media-left">
-      <div class="media-object rounded vue-logo"></div>
+  <div class="media mb-3">
+    <div class="mr-2">
+      <div class="rounded vue-logo"></div>
     </div>
+
     <div class="media-body">
       <strong class="d-block">{{item.title}}</strong>
       <span>Quantity: {{item.quantity}} - {{item.price | formatMoney}}</span>
     </div>
+
     <div class="media-right align-middle">
       <RemoveFromCart :product="item" />
     </div>

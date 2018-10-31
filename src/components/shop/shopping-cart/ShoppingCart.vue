@@ -9,12 +9,13 @@
 
     <ShoppingCartSummary />
 
-    <div class="mt-1 text-xs-center">
+    <div class="mt-3 text-center">
       <button class="btn btn-success"
         :disabled="orderOnLimit"
         @click="buy">
         Checkout
       </button>
+
       <p v-if="orderOnLimit">Order is over limit.</p>
     </div>
   </div>
