@@ -1,8 +1,8 @@
 <template>
-  <div class="card text-xs-center">
+  <div class="card text-center">
     <div class="card-img-top vue-logo"></div>
 
-    <div class="card-block">
+    <div class="card-body">
       <h5 class="card-title">{{product.title}}</h5>
       <p class="card-text">{{product.price | formatMoney}} - Stock: {{product.inventory}}</p>
       <AddToCart :product="product" />
